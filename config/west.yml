@@ -3,11 +3,11 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
     # dongle_display
-    - name: englmaxi
-      url-base: https://github.com/englmaxi
+    #- name: englmaxi
+    #  url-base: https://github.com/englmaxi
     # nice_oled - nice_epaper - dongle_display!view - oled Adapter
-    - name: mctechnology17
-      url-base: https://github.com/mctechnology17
+    #- name: mctechnology17
+    #  url-base: https://github.com/mctechnology17
   projects:
     - name: zmk
       remote: zmkfirmware
