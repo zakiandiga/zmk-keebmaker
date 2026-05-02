@@ -3,13 +3,13 @@
 
 # Example for using the keymap-drawer ZMK user config workflow
 name: Draw ZMK keymaps
-on:
+on: 
   workflow_dispatch: # can be triggered manually
-  push: # automatically run on changes to following paths
-    paths:
-      - "config/sofle.keymap"
-      - "config/config_keymap-drawer.yaml"
-      - .github/workflows/keymap-drawer.yaml
+  # push: # automatically run on changes to following paths
+  #   paths:
+  #     - "config/sofle.keymap"
+  #     - "config/config_keymap-drawer.yaml"
+  #     - .github/workflows/keymap-drawer.yaml
 
 jobs:
   draw:
