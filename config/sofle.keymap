@@ -121,7 +121,7 @@
                            &kp LGUI  &mo 3    &kp LALT      &lt 4 DEL   &kp SPACE   &kp SPACE    &lt 4 BSPC  &mo 5         &mo 3        &kp DEL
         >;
 
-        sensor-bindings = <BINDING &mmv MOVE_UP &mmv MOVE_DOWN  BINDING &mmv MOVE_RIGHT &mmv MOVE_LEFT>;//<&inc_dec_kp RIGHT LEFT  &inc_dec_kp Up DOWN>;
+        sensor-bindings = <BINDING [&mmv MOVE_UP] [&mmv MOVE_DOWN]  BINDING [&mmv MOVE_RIGHT] [&mmv MOVE_LEFT]>;//<&inc_dec_kp RIGHT LEFT  &inc_dec_kp Up DOWN>;
       };
 
       layer_1 {
