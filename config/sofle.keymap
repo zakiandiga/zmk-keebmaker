@@ -21,6 +21,14 @@
 
 / {
     behaviors {
+
+        enc_mouse: enc_mouse {
+          display-name = "Encoder Mouse Navi",
+          compatible = "zmk,behavior-sensor-rotate-var";
+          #sensor-binding-cells = <2>;
+          bindings = <&mmv>, <&mmv>;
+        };
+
         mt: mod_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -121,7 +129,7 @@
                            &kp LGUI  &mo 3    &kp LALT      &lt 4 DEL   &kp SPACE   &kp SPACE    &lt 4 BSPC  &mo 5         &mo 3        &kp DEL
         >;
 
-        sensor-bindings = <BINDING [&mmv MOVE_UP] [&mmv MOVE_DOWN]  BINDING [&mmv MOVE_RIGHT] [&mmv MOVE_LEFT]>;//<&inc_dec_kp RIGHT LEFT  &inc_dec_kp Up DOWN>;
+        sensor-bindings = <&enc_mouse MOVE_UP MOVE_DOWN &enc_mouse MOVE_RIGHT MOVE_LEFT>          
       };
 
       layer_1 {
@@ -134,7 +142,7 @@
                           &trans  &trans  &trans  &trans   &trans  &trans   &trans  &trans  &trans  &trans
         >;
 
-        sensor-bindings = <&inc_dec_kp RIGHT LEFT  &inc_dec_kp Up DOWN>;
+        sensor-bindings = <&inc_dec_kp RIGHT LEFT  &inc_dec_kp UP DOWN>;
       };
 
       layer_2 {
@@ -147,7 +155,7 @@
                              &trans    &trans       &trans         &trans      &trans   &trans   &trans          &trans     &trans           &trans
         >;
 
-        sensor-bindings = <&inc_dec_kp LEFT RIGHT  &inc_dec_kp UP DOWN>;
+        sensor-bindings = <&inc_dec_kp RIGHT LEFT  &inc_dec_kp UP DOWN>;
       };
       
       layer_3 {
@@ -160,7 +168,7 @@
                                  &trans     &trans       &trans        &trans      &trans   &trans  &trans         &trans     &trans           &trans
         >;
 
-        sensor-bindings = <&inc_dec_kp LEFT RIGHT  &inc_dec_kp UP DOWN>;
+        sensor-bindings = <&inc_dec_kp RIGHT LEFT  &inc_dec_kp UP DOWN>;
       };
 
 
