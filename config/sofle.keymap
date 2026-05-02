@@ -129,7 +129,7 @@
                            &kp LGUI  &mo 3    &kp LALT      &lt 4 DEL   &kp SPACE   &kp SPACE    &lt 4 BSPC  &mo 5         &mo 3        &kp DEL
         >;
 
-        sensor-bindings = <&enc_mouse MOVE_UP MOVE_DOWN &enc_mouse MOVE_RIGHT MOVE_LEFT>          
+        sensor-bindings = <&enc_mouse MOVE_UP MOVE_DOWN &enc_mouse MOVE_RIGHT MOVE_LEFT>;   
       };
 
       layer_1 {
