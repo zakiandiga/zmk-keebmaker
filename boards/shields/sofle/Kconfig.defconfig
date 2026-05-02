@@ -4,7 +4,7 @@
 if SHIELD_SOFLE_LEFT || SHIELD_SOFLE_DONGLE_XIAO || SHIELD_SOFLE_DONGLE_PRO_MICRO
 
 config ZMK_KEYBOARD_NAME
-    default "Sofle"
+    default "TheremySofle"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
