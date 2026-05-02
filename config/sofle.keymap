@@ -23,7 +23,7 @@
     behaviors {
 
         enc_mouse: enc_mouse {
-          display-name = "Encoder Mouse Navi",
+          display-name = "Encoder Mouse Navi";
           compatible = "zmk,behavior-sensor-rotate-var";
           #sensor-binding-cells = <2>;
           bindings = <&mmv>, <&mmv>;
