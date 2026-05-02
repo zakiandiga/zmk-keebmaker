@@ -4,6 +4,9 @@
  * SPDX-License-Identifier: MIT
  */
 
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
@@ -15,8 +18,7 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/reset.h>
 
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 800
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 20
+
 
 
 / {
@@ -128,7 +130,7 @@
                            &kp LGUI  &mo 3    &kp LALT      &lt 4 DEL   &kp SPACE   &kp SPACE    &lt 4 BSPC  &mo 5         &mo 3        &kp DEL
         >;
 
-        sensor-bindings = <&enc_mouse MOVE_UP MOVE_DOWN &enc_mouse MOVE_RIGHT MOVE_LEFT>;   
+        sensor-bindings = <&inc_dec_kp RIGHT LEFT  &inc_dec_kp UP DOWN>;
       };
 
       layer_1 {
@@ -145,7 +147,7 @@
       };
 
       layer_2 {
-        display-name = "symbols main";
+        display-name = "homerow symbol";
         bindings = <
           &trans   &kp N1    &kp N2    &kp N3       &kp N4         &kp N5                        &kp N6          &kp N7     &kp N8           &kp N9        &kp N0    &trans
           &trans   &trans    &kp TILDE &kp GRAVE    &kp LBKT       &kp RBKT                      &kp LBRC        &kp RBRC   &kp EXCLAMATION  &kp QUESTION  &kp CARET &trans
@@ -154,7 +156,7 @@
                              &trans    &trans       &trans         &trans      &trans   &trans   &trans          &trans     &trans           &trans
         >;
 
-        sensor-bindings = <&inc_dec_kp RIGHT LEFT  &inc_dec_kp UP DOWN>;
+        sensor-bindings = <&enc_mouse MOVE_Y(100) MOVE_Y(-100) &enc_mouse MOVE_X(100) MOVE_Y(-100)>;   
       };
       
       layer_3 {
@@ -178,7 +180,7 @@
           &trans   &kp F6    &kp F7     &kp F8       &kp F9    &kp F10                           &kp DOT  &kp N4      &kp N5     &kp N6  &kp PLUS  &kp EQUAL
           &trans   &kp PSCRN &trans     &trans       &kp F11   &kp F12                           &kp N0   &kp N1      &kp N2     &kp N3  &trans    &trans
           &trans   &trans    &trans     &trans       &trans    &trans    &trans     &trans       &none    &kp MINUS   &kp EQUAL  &kp GT  &kp LT    &trans
-                             &trans     &trans       &trans    &trans    &kp ENTER  &kp ENTER    &trans   &trans      &trans     &trans  &trans
+                             &trans     &trans       &trans    &trans    &kp ENTER  &kp ENTER    &trans   &trans      &trans     &trans
         >;
 
         sensor-bindings = <&inc_dec_kp C_NEXT C_PREV  &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -187,11 +189,11 @@
       layer_5{ // unity macros
         display-name = "BT config & Unity Macros";
         bindings = <
-          &bt BT_CLR    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3  &trans                     &trans     &trans     &trans &trans &trans
-          &trans        &trans       &trans       &trans       &trans        &trans                     &ma_unity0 &trans     &trans     &trans &trans &trans
-          &trans        &trans       &trans       &trans       &trans        &trans                     &ma_unity1 &ma_unity2 &ma_unity3 &trans &trans &trans
-          &trans        &trans       &trans       &trans       &trans        &trans   &trans   &trans   &ma_unity4 &ma_unity5 &ma_unity6 &trans &trans &trans
-                                     &trans       &trans       &trans        &trans   &trans   &trans   &trans     &trans     &trans     &trans 
+          &bt BT_CLR    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3  &bt BT_SEL 4                     &trans     &trans     &trans &trans &trans
+          &trans        &trans       &trans       &trans       &trans        &trans                           &ma_unity0 &trans     &trans     &trans &trans &trans
+          &trans        &trans       &trans       &trans       &trans        &trans                           &ma_unity1 &ma_unity2 &ma_unity3 &trans &trans &trans
+          &trans        &trans       &trans       &trans       &trans        &trans         &trans   &trans   &ma_unity4 &ma_unity5 &ma_unity6 &trans &trans &trans
+                                     &trans       &trans       &trans        &trans         &trans   &trans   &trans     &trans     &trans     &trans 
         >;
 
         sensor-bindings = <&inc_dec_kp C_NEXT C_PREV  &inc_dec_kp C_VOL_UP C_VOL_DN>;
