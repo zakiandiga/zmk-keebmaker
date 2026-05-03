@@ -192,7 +192,7 @@
       layer_5{ // unity macros
         display-name = "BT config & Unity Macros";
         bindings = <
-          &bt BT_CLR    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3  &bt BT_SEL 4                     &trans     &trans     &trans &trans &trans
+          &bt BT_CLR    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3  &bt BT_SEL 4                     &trans     &trans     &trans     &trans &trans &trans
           &trans        &trans       &trans       &trans       &trans        &trans                           &ma_unity0 &trans     &trans     &trans &trans &trans
           &trans        &trans       &trans       &trans       &trans        &trans                           &ma_unity1 &ma_unity2 &ma_unity3 &trans &trans &trans
           &trans        &trans       &trans       &trans       &trans        &trans         &trans   &trans   &ma_unity4 &ma_unity5 &ma_unity6 &trans &trans &trans
